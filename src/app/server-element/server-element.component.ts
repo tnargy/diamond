@@ -7,8 +7,8 @@ import { Component, Input } from '@angular/core';
 })
 export class ServerElementComponent {
   @Input('srvElement') element: {
-    type: string, 
-    name: string, 
+    type: string,
+    name: string,
     content: string};
 
 }
