@@ -8,20 +8,19 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class CockpitComponent {
   @Output() serverCreated = new EventEmitter<{serverName: string, serverContent: string}>();
   @Output() bluprintCreated = new EventEmitter<{serverName: string, serverContent: string}>();
-  newServerContent = '';
 
-  onAddServer(nameInput: HTMLInputElement) {
+  onAddServer(nameInput: HTMLInputElement, conentInput: HTMLInputElement) {
 
     this.serverCreated.emit({
       serverName: nameInput.value,
-      serverContent: this.newServerContent
+      serverContent: conentInput.value
     });
   }
 
-  onAddBlueprint(nameInput: HTMLInputElement) {
+  onAddBlueprint(nameInput: HTMLInputElement, conentInput: HTMLInputElement) {
     this.bluprintCreated.emit({
       serverName: nameInput.value,
-      serverContent: this.newServerContent
+      serverContent: conentInput.value
     });
   }
 }
