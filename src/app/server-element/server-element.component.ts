@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, ContentChild, ElementRef, Input, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-server-element',
@@ -10,5 +10,7 @@ export class ServerElementComponent {
     type: string,
     name: string,
     content: string};
-
+  @Input() name: string;
+  @ViewChild('heading') header: ElementRef;
+  @ContentChild('contentParagraph') paragraph: ElementRef;
 }
