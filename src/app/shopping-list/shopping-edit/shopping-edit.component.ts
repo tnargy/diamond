@@ -13,7 +13,7 @@ export class ShoppingEditComponent {
 
   onAddItem() {
     const name = this.nameInputRef.nativeElement.value;
-    const amount = this.nameInputRef.nativeElement.value;
+    const amount = this.amountInputRef.nativeElement.value;
     const newIngredient = new Ingredient(name, amount);
     this.ingredientAdded.emit(newIngredient);
   }
